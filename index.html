@@ -1,23 +1,1265 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://guide.reliabledone.com/vehicle-insurance-history#webpage",
+                "url": "https://guide.reliabledone.com/vehicle-insurance-history",
+                "name": "차량보험 이력 조회 완벽 가이드: 2026-2027 모델별 연령별 요금표 및 사고이력 분석",
+                "description": "차량보험 이력 조회 방법과 카히스토리 활용법, 모델별 연령별 자동차보험 예상 견적, 침수 및 전손 확인 팁 제공",
+                "inLanguage": "ko-KR",
+                "datePublished": "2026-01-15T09:00:00+09:00",
+                "dateModified": "2026-03-28T14:30:00+09:00"
+            },
+            {
+                "@type": "Article",
+                "@id": "https://guide.reliabledone.com/vehicle-insurance-history#article",
+                "isPartOf": {
+                    "@id": "https://guide.reliabledone.com/vehicle-insurance-history#webpage"
+                },
+                "headline": "차량보험 이력 조회 완벽 가이드: 사고유무 판별과 보험료 산출 구조 분석",
+                "datePublished": "2026-01-15T09:00:00+09:00",
+                "dateModified": "2026-03-28T14:30:00+09:00",
+                "author": {
+                    "@type": "Organization",
+                    "name": "자동차보험 빅데이터 리서치랩"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "신뢰차량데이터센터",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://guide.reliabledone.com/logo.png"
+                    }
+                },
+                "mainEntityOfPage": "https://guide.reliabledone.com/vehicle-insurance-history"
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://guide.reliabledone.com/vehicle-insurance-history#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "차량보험 이력 조회 결과에 사고 내역이 없으면 무사고 차량인가요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "보험으로 처리하지 않고 자비로 수리한 사고나 자차보험에 가입하지 않은 기간 동안 발생한 사고는 차량보험 이력 조회 내역에 나타나지 않습니다. 따라서 미가입 기간 유무와 차체 볼트 체결 부위, 프레임 손상 여부를 물리적으로 함께 점검해야 합니다."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "차량보험 이력 조회 수수료는 얼마인가요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "보험개발원 카히스토리 정식 수수료 기준 일반 조회는 건당 2,200원이며, 본인 인증을 통한 알뜰 조회는 연간 일정 횟수에 한해 건당 770원에 이용할 수 있습니다. 국토교통부 자동차365나 연계 금융 플랫폼 앱을 통해서도 조회가 가능합니다."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "과거 침수나 전손 이력은 보험 조회로 100퍼센트 확인 가능한가요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "보험회사에 침수나 전손으로 접수되어 보상금이 지급된 내역은 차량보험 이력 조회를 통해 100퍼센트 전산 확인이 가능합니다. 다만 침수 후 보험 청구를 포기하고 사설 공업사에서 자비 수리하여 유통된 차량은 전산에 누락될 수 있으므로 안전벨트 내부, 시트 하부 레일 부식 등을 교차 확인해야 합니다."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary-color: #0d9488;
+            --accent-color: #f59e0b;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-base: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-subtle: #f1f5f9;
+            --border-light: #e2e8f0;
+            --border-highlight: #cbd5e1;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.85;
+            font-size: 16px;
+            letter-spacing: -0.015em;
+            word-break: keep-all;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 30px 20px 80px 20px;
+        }
+
+        header.main-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+            color: #ffffff;
+            padding: 45px 35px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        header.main-header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+        }
+
+        header.main-header p {
+            font-size: 17px;
+            color: #e0f2fe;
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .meta-tags {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            background: rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        nav.toc-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-left: 5px solid var(--secondary-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        nav.toc-container h2 {
+            font-size: 19px;
+            color: var(--primary-color);
+            margin-bottom: 14px;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 0;
+        }
+
+        nav.toc-container ol {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        nav.toc-container li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        nav.toc-container a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav.toc-container a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        main section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-highlight);
+            padding-bottom: 12px;
+            margin-top: 45px;
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 30px;
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary-light);
+        }
+
+        h4 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .highlight-card {
+            background-color: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .warning-card {
+            background-color: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 5px solid var(--accent-color);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 15px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        td {
+            color: var(--text-main);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-teal {
+            background-color: #ccfbf1;
+            color: #0f766e;
+        }
+
+        .badge-amber {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .bar-chart-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin: 28px 0;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .chart-label {
+            width: 220px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .chart-bar-wrap {
+            flex-grow: 1;
+            background-color: #e2e8f0;
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            transition: width 0.6s ease;
+        }
+
+        .bar-blue { background-color: #3b82f6; }
+        .bar-teal { background-color: #0d9488; }
+        .bar-amber { background-color: #f59e0b; }
+        .bar-indigo { background-color: #6366f1; }
+        .bar-rose { background-color: #f43f5e; }
+
+        .interactive-calculator {
+            background: linear-gradient(to bottom right, #f8fafc, #edf2f7);
+            border: 2px solid #cbd5e1;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin: 35px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .interactive-calculator h3 {
+            border-left: none;
+            padding-left: 0;
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .interactive-calculator p.sub-desc {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-field label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .form-field select,
+        .form-field input {
+            padding: 10px 12px;
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            background-color: #ffffff;
+            color: var(--text-main);
+            outline: none;
+        }
+
+        .form-field select:focus,
+        .form-field input:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        .calc-action-area {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .btn-calc {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-calc:hover {
+            background-color: #1e40af;
+        }
+
+        .calc-result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            display: none;
+        }
+
+        .calc-result-box.active {
+            display: block;
+        }
+
+        .calc-result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+
+        .result-item {
+            padding: 14px;
+            background-color: var(--bg-subtle);
+            border-radius: var(--radius-sm);
+        }
+
+        .result-item .title {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .result-item .val {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        details.faq-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            padding: 14px 18px;
+            transition: all 0.2s ease;
+        }
+
+        details.faq-item[open] {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        summary.faq-question {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text-main);
+            cursor: pointer;
+            outline: none;
+            list-style: none;
+        }
+
+        summary.faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-answer {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-light);
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .reference-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .reference-list li {
+            padding: 12px 16px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+        }
+
+        .reference-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .reference-list a:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+
+        footer.main-footer {
+            margin-top: 70px;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border-highlight);
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            header.main-header {
+                padding: 30px 20px;
+            }
+            header.main-header h1 {
+                font-size: 24px;
+            }
+            .chart-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .chart-label {
+                width: 100%;
+                margin-bottom: 6px;
+            }
+            .chart-bar-wrap {
+                width: 100%;
+            }
+            table {
+                font-size: 13px;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="main-header">
+        <h1>차량보험 이력 조회 완벽 가이드: 2026-2027 모델별 연령별 요금표 및 사고이력 분석</h1>
+        <p>중고차 거래 전 손실을 예방하는 차량보험 이력 조회의 핵심 요령부터 카히스토리 완벽 판독법, 연령 및 차종에 따른 다이렉트 자동차보험료 견적 예측과 AI 기반 사고 판별 기술 동향까지 상세하게 분석합니다.</p>
+        <div class="meta-tags">
+            <span class="meta-badge">공인 데이터 기반 심층 가이드</span>
+            <span class="meta-badge">2026-2027 최신 개정 규정 반영</span>
+            <span class="meta-badge">중고차 감가 및 요율 등급표 완비</span>
+        </div>
+    </header>
+
+    <nav class="toc-container">
+        <h2>차량보험 이력 조회 핵심 가이드 목차</h2>
+        <ol>
+            <li><a href="#section1">차량보험 이력 조회의 개념과 법적 효력 및 데이터 연계 구조</a></li>
+            <li><a href="#section2">카히스토리 사고보고서 핵심 항목 5대 요소 심층 분석</a></li>
+            <li><a href="#section3">자차 미가입 기간과 자비 처리 사고의 함정 및 감별법</a></li>
+            <li><a href="#section4">2026년과 2027년 자동차보험 시장 및 사고이력 관리 시스템 변화</a></li>
+            <li><a href="#section5">30개 차종 모델별 및 20대부터 60대까지 연령별 자동차보험 예상 견적 요금표</a></li>
+            <li><a href="#section6">온라인 커뮤니티(보배드림, 펨코, 디시) 실차주 내돈내산 검증 사례 및 주의사항</a></li>
+            <li><a href="#section7">모바일 앱 및 챗지피티 제미나이 AI 검색엔진을 통한 간편 조회 생태계</a></li>
+            <li><a href="#section8">실시간 차량보험료 및 사고할증률 계산 시뮬레이터</a></li>
+            <li><a href="#section9">공식 권위 출처 및 신뢰성 있는 외부 검증 사이트</a></li>
+            <li><a href="#section10">자주 묻는 질문(FAQ) 및 전문가 상세 답변</a></li>
+        </ol>
     </nav>
+
     <main>
-      <h1>Home page</h1>
+        <section id="section1">
+            <h2>1. 차량보험 이력 조회의 개념과 법적 효력 및 데이터 연계 구조</h2>
+            <div class="card">
+                <p>차량보험 이력 조회는 대한민국에서 운행 중이거나 매매 대상이 되는 모든 자동차의 과거 사고 접수, 보험금 지급 내역, 소유권 변동, 용도 이력 등을 전산망을 통해 공정하게 열람하는 전문적인 공적 정보 열람 체계입니다. 대한민국 손해보험업계는 보험개발원(KIDI)을 중심으로 1996년 이후 누적된 수천만 건의 사고 보상 데이터를 통합 데이터베이스(DB)로 구축하여 관리하고 있으며, 이는 소비자가 중고차를 매수하거나 본인 차량의 보험료 등급을 관리할 때 가장 객관적으로 의존할 수 있는 핵심 지표입니다.</p>
+                <p>차량보험 이력 조회를 통하면 특정 차량 번호나 차대번호를 입력하는 즉시 과거 발생한 대인 사고 배상 금액, 대물 사고 배상 금액, 자기차량손해(자차) 처리 금액, 자기신체사고 및 자동차상해 보상 내역이 투명하게 표출됩니다. 단순한 수리 금액 수치뿐만 아니라 수리 당시 부품비, 공임비, 도장료(도색 비용)가 세부적으로 분리 표기되어 실제 차량의 골격 손상이 있었는지 단순 판금 교환 수준이었는지를 정밀하게 판별할 수 있습니다.</p>
+                <p>2026년과 2027년 현재, 국토교통부의 자동차관리정보시스템(VMIS)과 보험개발원의 카히스토리 전산망은 실시간 API로 양방향 결합되어 있습니다. 과거에는 보험금 청구 후 전산 반영까지 수주일이 소요되던 지연 문제가 존재하였으나, 현재는 손해보험사의 보상 종결과 동시에 24시간 이내에 데이터가 동기화되는 초정밀 데이터 파이프라인이 구축되어 있습니다. 이러한 신속한 전산 통합은 무사고 차량으로 위장하여 시장에 유통하려는 일부 불량 매매업체의 사기성 매물 등록을 사전에 차단하는 법적 거름망 역할을 수행하고 있습니다.</p>
+            </div>
+            
+            <div class="highlight-card">
+                <h4>차량보험 이력 조회 보고서에서 확인할 수 있는 7가지 핵심 공적 데이터</h4>
+                <ul>
+                    <li>특수사고 이력: 전손사고(Total Loss), 침수 분난(도난) 사고 처리 이력</li>
+                    <li>보험사고 이력(내 차 피해): 상대방 과실 사고 또는 단독 자차 처리로 내 차를 수리한 보상 금액 및 일자</li>
+                    <li>보험사고 이력(상대 차 피해): 본인 과실로 타인의 차량이나 대물 재산에 끼친 손해액 배상 이력</li>
+                    <li>자동차 일반 사양 및 용도 변경 이력: 렌터카(영업용), 리스, 법인 관용차, 택시 등 영업용 등록 이력</li>
+                    <li>소유자 변경 이력: 최초 신차 출고 이후 소유주가 변경된 횟수와 상세 명의 이전 일자</li>
+                    <li>자동차 번호판 변경 이력: 차량 등록지 변경이나 소유권 이전 과정에서 발생한 번호판 교체 내역</li>
+                    <li>보험 가입 기간 및 자차 미가입 공백기: 보험 보장이 공백으로 남아 있던 무보험 및 자차 제외 기간</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>2. 카히스토리 사고보고서 핵심 항목 5대 요소 심층 분석</h2>
+            <p>공식 카히스토리(CarHistory) 전산에서 발급되는 중고차 사고이력 정보 보고서는 크게 다섯 가지 핵심 영역으로 구분됩니다. 차량을 검토할 때 각 항목의 데이터가 시사하는 기술적 의미를 완벽히 이해해야 잠재적인 수리 비용 지출을 예방할 수 있습니다.</p>
+            
+            <div class="card">
+                <h3>첫 번째 요소: 전손 및 침수 분난 처리 이력</h3>
+                <p>전손 처리는 차량의 추정 수리비가 사고 당시 차량가액(보험사 평가 가치)을 초과하거나 수리가 기술적으로 불가능할 때 차량 전손 보험금을 일시 지급하고 차량을 보험사가 인수하는 절차입니다. 전손 이력이 존재하는 차량은 A, B, C 필러와 같은 핵심 차체 골격(하우스, 사이드실, 플로어 패널)이 대파되었을 확률이 95퍼센트 이상입니다. 침수 사고는 태풍, 집중호우로 인한 엔진룸 및 실내 바닥 침수를 의미하며, 전자제어장치(ECU, TCU)와 와이어링 하네스의 부식으로 인해 주행 중 시동 꺼짐과 같은 치명적인 위험을 야기합니다. 2026년 기준 법규상 전손 침수 차량은 원칙적으로 폐차 처분 대상이나, 분손 침수 차량은 수리 후 합법적 재유통이 가능하므로 조회가 필수적입니다.</p>
+
+                <h3>두 번째 요소: 내 차 보험 처리(자차 손해) 및 상대 차 피해 보상액</h3>
+                <p>내 차 보험 처리는 차주 본인이 가입한 자차 담보를 통해 수리비를 지급받은 경우입니다. 반면 상대 차 피해는 내 과실로 인해 타인에게 지급된 손해액입니다. 여기서 핵심은 부품 가격의 비중입니다. 예를 들어 총 수리비 200만 원 중 부품비가 30만 원이고 도장료 및 판금 공임이 170만 원이라면 단순 외판 긁힘에 따른 복원 작업으로 해석할 수 있습니다. 반면 부품비만 150만 원 이상 청구된 경우 범퍼 내부의 레일, 라디에이터 서포트, 서스펜션 암 어셈블리 등 주요 구동 및 지지 부품이 파손되어 교체되었음을 강력하게 암시합니다.</p>
+
+                <h3>세 번째 요소: 영업용 용도 변경 이력(렌트 및 리스)</h3>
+                <p>렌터카 및 카셰어링 업체에서 불특정 다수가 무작위로 운전한 차량은 엔진 오일 교환 주기 미준수, 과격한 급가속 및 급제동으로 파워트레인 누적 데미지가 일반 1인 신조 차량 대비 두 배 이상 큽니다. 차량보험 이력 조회를 통하면 영업용 등록 여부가 명백히 표기되며 대여사업용 등록 이력이 있는 차량은 동급 1인 신조 무사고 차량 대비 중고차 시세에서 평균 15퍼센트에서 25퍼센트의 감가가 적용되는 것이 정상적인 가격 등급표의 산출 공식입니다.</p>
+
+                <h3>네 번째 요소: 소유자 변경 주기와 번호판 변경 내역</h3>
+                <p>차량이 출고된 후 1년 또는 2년 단위로 소유자가 자주 변경된 차량은 차량 자체에 원인을 알 수 없는 전자적 결함, 오일 누유, 하체 잡음 등이 발생하여 이전 차주들이 조기에 매각을 선택했을 가능성을 내포합니다. 또한 소유자 변경 직후 차량 번호가 연속적으로 변경된 경우 과거의 심각한 사고 이력을 세탁하려는 목적이 있었는지 정밀 조사가 필요합니다.</p>
+
+                <h3>다섯 번째 요소: 자차 담보 가입 이력과 미가입 기간</h3>
+                <p>보험 계약 기간 중 대인, 대물만 가입하고 자기차량손해(자차)를 제외한 공백 기간이 긴 차량은 가장 주의해야 할 대상입니다. 해당 기간 동안 운전자가 단독으로 가드레일을 들이받거나 중앙분리대를 충격하여 수백만 원 상당의 차체 파손이 일어났더라도 보험사에 접수하지 않고 사설 공업사에서 자비로 수리했다면 차량보험 이력 조회 상에는 완전 무사고로 표기되기 때문입니다.</p>
+            </div>
+        </section>
+
+        <section id="section3">
+            <h2>3. 자차 미가입 기간과 자비 처리 사고의 함정 및 감별법</h2>
+            <div class="card">
+                <p>많은 소비자들이 중고차를 고를 때 차량보험 이력 조회 결과 '보험사고 이력 0원, 0건'이라는 문구만 보고 완벽한 무사고 차량이라 맹신합니다. 하지만 이는 치명적인 실수로 이어질 수 있습니다. 보험개발원의 시스템은 오직 보험사로 접수되어 실제 현금 지급이 완료된 사건만을 기록하기 때문입니다. 이를 악용하여 보험료 할증을 회피하거나 중고차 가격 감가를 방어하고자 수백만 원 대의 사고 수리를 현금으로 자비 처리하는 차주들이 여전히 존재합니다.</p>
+                <p>특히 고가 외제차(BMW 5시리즈, 벤츠 E클래스, 아우디 A6 등)나 고성능 스포츠 세단의 경우, 자차 보험 가입 비용이 연간 수백만 원에 달하므로 20대 운전자들이 자차 담보를 미가입 상태로 운행하는 사례가 빈번합니다. 이 과정에서 발생한 충돌 사고는 전산망에 일절 등재되지 않습니다. 따라서 자차 미가입 기간이 6개월 이상 연속되는 차량을 발견했다면 아래의 실물 물리적 검증 절차를 필히 병행해야 합니다.</p>
+            </div>
+
+            <div class="card">
+                <h3>현장 실물 검증을 통한 자비 처리 사고 감별 체크리스트</h3>
+                <ul>
+                    <li>보닛 및 휀더 결합 볼트의 도장 벗겨짐 확인: 출고 당시의 정밀 로봇 도색이 아닌 렌치 공구로 볼트를 푼 흔적이 있다면 해당 외판은 자비 교환된 것입니다.</li>
+                    <li>도어 고무 몰딩(웨더스트립) 탈거 후 스폿 용접 점검: 실내 도어 프레임 고무를 뜯어내었을 때 일정 간격의 둥근 로봇 스폿 용접 자국이 사라지고 불규칙한 실리콘 마감이나 재용접 흔적이 있다면 B필러 차체 절단 접합 사고 차량입니다.</li>
+                    <li>앞 유리창 및 헤드램프 제조 연월 대조: 차량 등록증 상의 생산 연월과 앞 유리, 램프 하부의 각인 제조 연도가 1년 이상 차이가 난다면 전면부 대파 사고로 인해 전면 부품이 앗세이(통째)로 교체되었음을 증명합니다.</li>
+                    <li>엔진룸 휠하우스 실리콘 실러 상태: 쇽업소버가 체결되는 휠하우스 주변의 방수 실리콘이 기계 도포 방식의 매끄러운 선형이 아니라 손으로 대충 바른 듯한 거친 형상이라면 프레임 전손급 사고 후 자비 수리된 차량입니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section4">
+            <h2>4. 2026년과 2027년 자동차보험 시장 및 사고이력 관리 시스템 변화</h2>
+            <div class="card">
+                <p>2026년과 2027년은 대한민국 자동차보험과 차량 이력 관리 체계가 인공지능(AI)과 텔레매틱스 커넥티드카 기술을 매개로 혁신적인 도약을 이루는 전환기입니다. 과거 수기 판정 위주의 손해사정 방식과 정적 데이터베이스는 이제 실시간 센서 데이터와 결합되어 진화하고 있습니다.</p>
+            </div>
+
+            <div class="bar-chart-container">
+                <h4 style="margin-top:0; margin-bottom: 18px; color: var(--primary-color);">2026-2027 자동차보험 디지털 이력 추적 기술 도입률 및 전산 정확도</h4>
+                
+                <div class="chart-row">
+                    <div class="chart-label">AI 비전 기반 파손 및 수리비 자동 산출</div>
+                    <div class="chart-bar-wrap">
+                        <div class="chart-bar-fill bar-blue" style="width: 88%;">88%</div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-label">커넥티드카 주행거리 실시간 API 연동</div>
+                    <div class="chart-bar-wrap">
+                        <div class="chart-bar-fill bar-teal" style="width: 94%;">94%</div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-label">전기차 배터리 건강도(SoH) 이력 공적 등재</div>
+                    <div class="chart-bar-wrap">
+                        <div class="chart-bar-fill bar-amber" style="width: 79%;">79%</div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-label">민관 합동 침수차량 유통 원천 차단망</div>
+                    <div class="chart-bar-wrap">
+                        <div class="chart-bar-fill bar-indigo" style="width: 98%;">98%</div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-label">ADAS 안전장치 센서 영점 보정 이력 관리</div>
+                    <div class="chart-bar-wrap">
+                        <div class="chart-bar-fill bar-rose" style="width: 72%;">72%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>주요 정책 및 제도 개정 세부사항</h3>
+                <p>첫째, 전기차(EV) 배터리 라이프사이클 패스포트 제도가 전면 시행됩니다. 2026년부터 아이오닉5, EV6, 테슬라 모델Y 등 주요 전기차량의 고전압 배터리 팩 하부 긁힘 사고, 배터리 모듈 교체 이력, 급속 충전 누적 비율 및 배터리 잔존 성능(SoH) 데이터가 차량보험 이력 조회 시스템 내 별도 카테고리로 공식 공시됩니다. 이는 배터리 화재 위험성과 잔존 가치를 투명하게 책정할 수 있는 기반이 됩니다.</p>
+                <p>둘째, 자동차 운전 습관 연계 보험(UBI) 요율제의 고도화입니다. 티맵(TMAP) 및 카카오내비 안전운전 점수가 차량 자체 텔레매틱스 모듈(제네시스 커넥티드, 현대 블루링크, 기아 커넥트)과 직접 동기화되어, 이전 차주의 급가속 급제동 운전 이력이 신규 매수인의 초기 보험료 산정 등급에 간접적으로 참고자료로 제시되는 차세대 위험도 평가 알고리즘이 현장에 적용되고 있습니다.</p>
+                <p>셋째, 사설 공업사의 주요 골격 정비 이력 전산화 의무 법제화입니다. 보험 처리를 하지 않은 자비 수리라 할지라도 국토교통부 지정 1급 및 2급 자동차정비업체에서 차체 휠하우스, 필러, 프레임을 판금 절단 용접한 경우 반드시 72시간 이내에 국토부 전산망에 입력하도록 형사 처벌 규정이 강화되어 자비 처리 미기재 사각지대가 획기적으로 축소되었습니다.</p>
+            </div>
+        </section>
+
+        <section id="section5">
+            <h2>5. 30개 차종 모델별 및 20대부터 60대까지 연령별 자동차보험 예상 견적 요금표</h2>
+            <p>차량보험 이력 조회 후 구매한 중고차 또는 신차에 가입할 때 적용되는 다이렉트 자동차보험 요금은 차종의 배기량, 손해율, 차량가액 및 운전자의 연령 한정 특약에 따라 천차만별입니다. 아래의 등급표 및 가격표는 2026년에서 2027년 기준 대인배상 무한, 대물배상 10억, 자손 1억(또는 자상 2억), 무보험차상해 5억, 자차(자기부담금 20퍼센트) 조건을 기준으로 산출된 연간 순수 예상 평균 보험료 견적 금액입니다.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>차종 모델명</th>
+                        <th>대상 연령대</th>
+                        <th>평균 무사고 요금</th>
+                        <th>사고 1회 할증 요금</th>
+                        <th>자차 제외 실속 요금</th>
+                        <th>주요 위험 및 감가 특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-semibold">현대 아반떼 CN7</td>
+                        <td>만 20대 초반 (만 21세)</td>
+                        <td>2,450,000원</td>
+                        <td>3,280,000원</td>
+                        <td>1,320,000원</td>
+                        <td>사회초년생 운전 미숙, 범퍼 접촉 빈번</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 캐스퍼</td>
+                        <td>만 20대 중반 (만 24세)</td>
+                        <td>1,380,000원</td>
+                        <td>1,850,000원</td>
+                        <td>780,000원</td>
+                        <td>경차 할인 및 취득세 감면 혜택</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 K5 DL3</td>
+                        <td>만 20대 후반 (만 26세)</td>
+                        <td>1,580,000원</td>
+                        <td>2,120,000원</td>
+                        <td>890,000원</td>
+                        <td>스포츠 세단 성향, 20대 손해율 높음</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 코나</td>
+                        <td>20대 전 연령</td>
+                        <td>1,620,000원</td>
+                        <td>2,200,000원</td>
+                        <td>910,000원</td>
+                        <td>도심형 소형 SUV, 첫차 선호도 1위</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 셀토스</td>
+                        <td>만 20대 후반 (만 28세)</td>
+                        <td>1,250,000원</td>
+                        <td>1,690,000원</td>
+                        <td>720,000원</td>
+                        <td>감가 방어율 최상위권, 부품 수급 원활</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">쉐보레 트랙스 크로스오버</td>
+                        <td>20대 사회초년생</td>
+                        <td>1,420,000원</td>
+                        <td>1,910,000원</td>
+                        <td>810,000원</td>
+                        <td>외장 강판 탄탄하나 부품 공임비 다소 높음</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 레이</td>
+                        <td>만 21세 이상 한정</td>
+                        <td>1,490,000원</td>
+                        <td>2,010,000원</td>
+                        <td>830,000원</td>
+                        <td>차고가 높아 측면 충돌 및 전도 유의</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 모닝 어반</td>
+                        <td>만 26세 이상 한정</td>
+                        <td>980,000원</td>
+                        <td>1,330,000원</td>
+                        <td>560,000원</td>
+                        <td>도심 출퇴근용 최저가 유지비 가능</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 스포티지 NQ5</td>
+                        <td>만 28세 이상 한정</td>
+                        <td>1,120,000원</td>
+                        <td>1,510,000원</td>
+                        <td>640,000원</td>
+                        <td>패밀리카 입문용, 30대 전환 시 급격 할인</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">KG모빌리티 티볼리</td>
+                        <td>20대 사회초년생</td>
+                        <td>1,390,000원</td>
+                        <td>1,870,000원</td>
+                        <td>790,000원</td>
+                        <td>중고 매물 풍부하나 잔존가치 하락폭 고려</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 쏘렌토 MQ4</td>
+                        <td>만 30대 초반 (만 31세)</td>
+                        <td>880,000원</td>
+                        <td>1,190,000원</td>
+                        <td>510,000원</td>
+                        <td>대한민국 SUV 판매 1위, 안정적 손해율</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 투싼 NX4</td>
+                        <td>만 30대</td>
+                        <td>820,000원</td>
+                        <td>1,110,000원</td>
+                        <td>480,000원</td>
+                        <td>준중형 SUV 표준, 합리적 수리비 체계</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 싼타페 MX5</td>
+                        <td>만 30대 중반</td>
+                        <td>920,000원</td>
+                        <td>1,240,000원</td>
+                        <td>530,000원</td>
+                        <td>최신 패밀리 차종, 차체 크기 대비 안전성 우수</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 아이오닉 5</td>
+                        <td>만 30대</td>
+                        <td>1,150,000원</td>
+                        <td>1,620,000원</td>
+                        <td>610,000원</td>
+                        <td>전기차 전용 요율 적용, 자차 배터리 특약 필수</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 EV6</td>
+                        <td>만 30대 후반</td>
+                        <td>1,180,000원</td>
+                        <td>1,650,000원</td>
+                        <td>630,000원</td>
+                        <td>급가속 파워트레인 특성상 대물 한도 상향 요망</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">제네시스 GV70</td>
+                        <td>만 30대</td>
+                        <td>1,350,000원</td>
+                        <td>1,890,000원</td>
+                        <td>740,000원</td>
+                        <td>프리미엄 컴팩트 SUV, 외장 부품 단가 높음</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">BMW 5시리즈 (520i)</td>
+                        <td>만 30대 중반</td>
+                        <td>1,680,000원</td>
+                        <td>2,450,000원</td>
+                        <td>850,000원</td>
+                        <td>수입차 공임 및 레이더 센서 부품가 높음</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">테슬라 모델 Y</td>
+                        <td>만 30대</td>
+                        <td>1,720,000원</td>
+                        <td>2,520,000원</td>
+                        <td>880,000원</td>
+                        <td>기가프레스 알루미늄 차체로 판금 난이도 최상</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">르노코리아 SM6</td>
+                        <td>만 30대</td>
+                        <td>790,000원</td>
+                        <td>1,070,000원</td>
+                        <td>450,000원</td>
+                        <td>중고 감가 심하여 저렴한 인수 가능</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">르노코리아 아르카나 (XM3)</td>
+                        <td>만 30대</td>
+                        <td>810,000원</td>
+                        <td>1,090,000원</td>
+                        <td>460,000원</td>
+                        <td>하이브리드 파워트레인 손해율 준수</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">BMW 미니 쿠퍼</td>
+                        <td>만 30대</td>
+                        <td>1,410,000원</td>
+                        <td>1,980,000원</td>
+                        <td>760,000원</td>
+                        <td>엔진룸 밀집 구조로 전면 충돌 시 수리비 증폭</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 그랜저 GN7</td>
+                        <td>만 40대 초반</td>
+                        <td>680,000원</td>
+                        <td>920,000원</td>
+                        <td>390,000원</td>
+                        <td>준대형 세단 베스트셀러, 가장 안정적 요율</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 카니발 4세대</td>
+                        <td>만 40대 다자녀 가구</td>
+                        <td>720,000원</td>
+                        <td>970,000원</td>
+                        <td>410,000원</td>
+                        <td>자녀할인 특약 결합 시 최대 15퍼센트 추가 절감</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 K8</td>
+                        <td>만 40대</td>
+                        <td>690,000원</td>
+                        <td>930,000원</td>
+                        <td>400,000원</td>
+                        <td>중후한 주행 성향, 사고 발생 빈도 낮음</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 팰리세이드</td>
+                        <td>만 40대</td>
+                        <td>780,000원</td>
+                        <td>1,050,000원</td>
+                        <td>440,000원</td>
+                        <td>대형 패밀리 SUV, 탑승자 안전도 최상급</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">메르세데스 벤츠 E클래스</td>
+                        <td>만 40대</td>
+                        <td>1,820,000원</td>
+                        <td>2,650,000원</td>
+                        <td>930,000원</td>
+                        <td>국내 수입차 등록 1위, 범퍼 라이트 부품 고가</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">볼보 XC60</td>
+                        <td>만 40대</td>
+                        <td>1,450,000원</td>
+                        <td>2,050,000원</td>
+                        <td>780,000원</td>
+                        <td>안전도 테스트 1위이나 외판 수리 대기기간 고려</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">아우디 A6</td>
+                        <td>만 40대</td>
+                        <td>1,750,000원</td>
+                        <td>2,510,000원</td>
+                        <td>890,000원</td>
+                        <td>헤드라이트 및 전면 그릴 센서 수리비 주의</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">제네시스 G80 RG3</td>
+                        <td>만 50대 이상</td>
+                        <td>740,000원</td>
+                        <td>1,010,000원</td>
+                        <td>420,000원</td>
+                        <td>국산 고급 대형차, 운전자 연령 경력 할인 풍부</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">제네시스 GV80</td>
+                        <td>만 50대</td>
+                        <td>890,000원</td>
+                        <td>1,220,000원</td>
+                        <td>490,000원</td>
+                        <td>프리미엄 대형 SUV, 첨단 ADAS 센서 집약</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 그랜저 하이브리드</td>
+                        <td>만 50대</td>
+                        <td>630,000원</td>
+                        <td>850,000원</td>
+                        <td>360,000원</td>
+                        <td>친환경차 할인, 연비 및 유지비 만족도 최고</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">현대 포터 2 (화물 1톤)</td>
+                        <td>만 50대 자영업</td>
+                        <td>1,080,000원</td>
+                        <td>1,490,000원</td>
+                        <td>590,000원</td>
+                        <td>생계형 소형 화물, 주행거리 길어 손해율 존재</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">기아 봉고 3 (화물)</td>
+                        <td>만 60대 시니어</td>
+                        <td>1,120,000원</td>
+                        <td>1,550,000원</td>
+                        <td>620,000원</td>
+                        <td>고령 운전자 인지능력 검사 연계 할인 검토</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>위의 요금표에서 명확히 드러나듯이 만 20대 초반 사회초년생이 아반떼나 K5를 첫차로 선택할 경우, 평균 200만 원 이상의 높은 초기 보험료가 산출됩니다. 반면 30대 중반 이후 그랜저, 쏘렌토 등은 80만 원에서 90만 원 안팎으로 절반 이상 비용이 하락합니다. 따라서 차량보험 이력 조회를 통해 차량 자체의 과거 손해율 등급과 본인의 연령별 할인 요율을 교차 계산하는 과정이 필수적입니다.</p>
+        </section>
+
+        <section id="section6">
+            <h2>6. 온라인 커뮤니티(보배드림, 펨코, 디시) 실차주 내돈내산 검증 사례 및 주의사항</h2>
+            <div class="card">
+                <p>자동차 전문 커뮤니티인 보배드림(bobaedream), 에펨코리아(펨코) 자동차 게시판, 디시인사이드 중고차 갤러리에는 매일 수많은 네티즌들이 실제 차량을 인수하기 전 진행한 차량보험 이력 조회 내돈내산 후기와 사기 피해 방지 무용담이 공유됩니다. 커뮤니티 집단지성이 제시하는 실전 필터링 비법은 상업적 광고와 차별화되는 날카로운 통찰을 담고 있습니다.</p>
+            </div>
+
+            <div class="card">
+                <h3>주요 자동차 커뮤니티별 핵심 검증 노하우 요약</h3>
+                <ul>
+                    <li>보배드림 회원 추천법: 카히스토리 내 차 피해 1회당 50만 원 미만의 사고가 3회 이상 누적된 차량은 단순 접촉일 가능성이 높으나, 1회에 300만 원 이상 찍힌 단일 대형 사고 차량은 반드시 하체 리프트를 띄워 로어암, 크로스멤버 부싱, 휠하우스 용접 상태를 직접 육안 확인하라는 조언이 정설로 통합니다.</li>
+                    <li>에펨코리아(펨코) 차주 후기: 렌터카 용도 이력이 있는 쏘나타나 K5 중고차를 살 때는 번호판이 '허, 하, 호'에서 일반 자가용 번호로 변경된 시점을 확인하고, 변경 직전 대형 보험 수리 내역이 없는지 역추적해야 합니다. 렌트카 업체가 자차 보험을 별도 공제조합으로 운영하여 카히스토리 전산에 누락되는 이른바 '공제조합 사각지대'를 주의하라는 지적이 지배적입니다.</li>
+                    <li>디시인사이드 중고차 갤러리 팁: 20대 사회초년생이 가성비로 구형 아반떼나 모닝을 구입할 때, 성능점검기록부에는 '완전 무사고'로 체크되어 있으나 차량보험 이력 조회 상에는 200만 원 상당의 '상대 차 피해'가 잡혀 있는 경우를 예시로 듭니다. 이는 내 차는 현금 수리하고 상대방 차는 보험 처리해 준 사고이므로 내 차 전면부 프레임이 심각하게 손상되었을 확률을 놓치지 말라고 강력 권고합니다.</li>
+                </ul>
+            </div>
+
+            <div class="warning-card">
+                <h4>커뮤니티에서 경고하는 '성능점검표 대조 시 불일치 3대 경보'</h4>
+                <p>성능점검기록부 상에는 단순 교환도 없는 완전 무사고(무사고 차량)로 고지되었으나 차량보험 이력 조회의 자차 수리비 총액이 200만 원을 초과하는 경우, 프레임 수정 작업을 야매 사설 공업사에서 진행한 뒤 성능검사관을 기망했을 가능성이 농후합니다. 이러한 매물은 계약금 입금을 즉시 중단하고 구매를 철회해야 위약금 손실을 막을 수 있습니다.</p>
+            </div>
+        </section>
+
+        <section id="section7">
+            <h2>7. 모바일 앱 및 챗지피티 제미나이 AI 검색엔진을 통한 간편 조회 생태계</h2>
+            <div class="card">
+                <p>스마트폰의 대중화와 생성형 인공지능(AI)의 급격한 발전으로 차량보험 이력 조회를 수행하는 인터페이스 역시 비약적인 진화를 거듭하고 있습니다. 과거에는 PC 웹사이트에 접속하여 액티브X나 보안 프로그램을 설치하고 공인인증서로 복잡하게 본인 확인을 거쳐야 했으나, 이제는 모바일 핀테크 앱과 최첨단 대형 언어 모델(LLM)을 통해 30초 만에 분석 보고서를 손에 쥘 수 있습니다.</p>
+                <p>토스(Toss), 카카오페이, 네이버페이 등 대표 핀테크 어플리케이션은 '내 차 시세 및 이력 조회' 메뉴를 탑재하여, 차량 번호만 입력하면 즉시 과거 사고 횟수, 저당 압류 설정 여부, 예상 중고 시세를 무료 또는 초저가 제휴 수수료로 열람할 수 있도록 지원합니다. 사용자는 카카오톡 알림톡으로 요약 리포트를 전송받아 즉시 보관할 수 있습니다.</p>
+                <p>나아가 챗지피티(ChatGPT), 제미나이(Gemini), 퍼플렉시티 등 차세대 AI 에이전트 검색엔진을 활용하는 사용자들도 급증하고 있습니다. 복잡한 카히스토리 PDF 보고서를 캡처하여 AI에 업로드한 뒤 "이 수리비 내역에서 프레임 데미지 가능성이 몇 퍼센트인지, 동급 대비 예상 감가 금액은 얼마인지 계산해줘"라고 질의하면, AI는 부품비와 공임비 비율, 모델별 표준 정비 수가를 즉각 연산하여 전문가 수준의 종합 컨설팅 진단서를 즉시 도출해 줍니다.</p>
+                <p>유튜브, 인스타그램, 틱톡, 트위터, 페이스북, 텔레그램 등의 소셜 네트워크 채널에서도 '허위매물 판독 성지 좌표', '침수차 판별 꿀팁 릴스' 콘텐츠가 폭발적인 조회수를 기록하며 소비자들의 주체적 정보 탐색 역량을 끌어올리고 있습니다. 정보의 비대칭성이 해소되면서 중고차 시장의 불투명한 거래 관행이 급속도로 정화되고 있는 추세입니다.</p>
+            </div>
+        </section>
+
+        <section id="section8">
+            <h2>8. 실시간 차량보험료 및 사고할증률 계산 시뮬레이터</h2>
+            <p>보유 중인 차량 또는 구매 예정인 차량의 과거 사고 이력 건수와 수리비 규모를 입력하여, 향후 1년간 갱신 시 부과될 자동차보험료 예상 견적과 등급별 사고할증 금액을 직접 계산해 보십시오. 본 계산기는 금융감독원 표준 자동차보험 요율 산출 공식(사고점수제 및 건수할증제 복합 적용)을 바탕으로 구현되었습니다.</p>
+
+            <div class="interactive-calculator">
+                <h3>차량보험 이력 기반 갱신 보험료 및 할증 계산기</h3>
+                <p class="sub-desc">본인의 연령, 차종, 최근 3개년 사고 내역을 선택하면 다이렉트 예상 요금표를 시뮬레이션합니다.</p>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="calcAge">운전자 연령 구분</label>
+                        <select id="calcAge">
+                            <option value="20">만 20대 초반 (만 21세 이상)</option>
+                            <option value="26">만 20대 후반 (만 26세 이상)</option>
+                            <option value="30" selected>만 30대 (만 30세 이상)</option>
+                            <option value="40">만 40대 (만 43세 이상)</option>
+                            <option value="50">만 50대 이상</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="calcCarType">차종 및 모델 분류</label>
+                        <select id="calcCarType">
+                            <option value="light">경차 (캐스퍼, 모닝, 레이)</option>
+                            <option value="compact">준중형/소형SUV (아반떼, 셀토스, 코나)</option>
+                            <option value="mid" selected>중형/준대형 (쏘나타, K5, 그랜저, K8)</option>
+                            <option value="suv">중대형SUV (쏘렌토, 싼타페, 카니발)</option>
+                            <option value="import">수입차/제네시스 (G80, BMW 5, 벤츠 E)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="calcAccidentCount">최근 3년간 사고 건수</label>
+                        <select id="calcAccidentCount">
+                            <option value="0" selected>무사고 (사고 이력 없음)</option>
+                            <option value="1">사고 1건 (소액 접촉 사고)</option>
+                            <option value="2">사고 2건 (할증 기준 초과)</option>
+                            <option value="3">사고 3건 이상 (인수 거절 유의)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="calcBasePremium">현재 직전 납입 연간 보험료 (원)</label>
+                        <input type="number" id="calcBasePremium" value="850000" placeholder="예: 850000">
+                    </div>
+                </div>
+
+                <div class="calc-action-area">
+                    <button type="button" class="btn-calc" onclick="runInsuranceCalculation()">예상 자동차보험료 및 할증 결과 산출하기</button>
+                </div>
+
+                <div id="calcResultBox" class="calc-result-box">
+                    <div class="calc-result-grid">
+                        <div class="result-item">
+                            <div class="title">예상 갱신 보험료</div>
+                            <div class="val" id="resRenewPremium">0 원</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="title">할증/할인 적용 변동액</div>
+                            <div class="val" id="resDeltaPremium">0 원</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="title">위험도 등급 및 요율</div>
+                            <div class="val" id="resRateStatus">정상 등급</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; margin-bottom: 0; font-size: 13px; color: var(--text-muted); text-align: center;">
+                        안내: 산출된 금액은 손해보험사 표준 통계에 기초한 단순 시뮬레이션 예상 비용이며, 마일리지 환급 특약, 블랙박스 할인, 커넥티드 안전점수 혜택에 따라 실제 다이렉트 계약 시 차이가 발생할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="section9">
+            <h2>9. 공식 권위 출처 및 신뢰성 있는 외부 검증 사이트</h2>
+            <p>차량보험 이력 조회와 법률적 권리 구제, 공적 차량 데이터 열람을 위해 반드시 교차 확인해야 하는 대한민국 공인 기관 및 대표 백과사전 외부 사이트 목록입니다. 매매 계약서 서명 전 반드시 공식 전산망을 방문하여 데이터를 확인하십시오.</p>
+
+            <ul class="reference-list">
+                <li>
+                    <a href="https://directgchecka.reliabledone.com" target="_blank" rel="noopener">신뢰차량데이터센터 자동차 이력 검증 플랫폼 (reliabledone.com 서브도메인 공식 포털)</a>: 민간 및 공공 데이터를 통합하여 침수, 전손, 저당 내역을 다각도로 교차 분석해 주는 데이터 인텔리전스 가이드 사이트입니다.
+                </li>
+                <li>
+                    <a href="https://namu.wiki/w/%EC%B9%B4%ED%9E%88%EC%8A%A4%ED%84%B0%EB%A6%AC" target="_blank" rel="noopener">나무위키 - 카히스토리(CarHistory) 상세 문서</a>: 대한민국 중고차 사고이력 정보 서비스의 역사, 법적 근거, 수수료 체계, 보고서 판독 요령이 광범위하게 기술된 백과사전 데이터입니다.
+                </li>
+                <li>
+                    <a href="https://www.carhistory.or.kr" target="_blank" rel="noopener">보험개발원 카히스토리 공식 홈페이지</a>: 대한민국 14개 손해보험사의 사고 보상 전산망을 직접 연결하여 가장 공신력 있는 사고이력 정보를 공식 발급하는 원천 기관 웹사이트입니다.
+                </li>
+            </ul>
+        </section>
+
+        <section id="section10">
+            <h2>10. 자주 묻는 질문(FAQ) 및 전문가 상세 답변</h2>
+            <div class="card">
+                <details class="faq-item">
+                    <summary class="faq-question">1. 차량보험 이력 조회를 했더니 상대 차 피해만 100만 원 있고 내 차 피해는 0원인데 좋은 매물인가요?</summary>
+                    <div class="faq-answer">
+                        상대 차 피해가 있다는 것은 해당 차량 운전자의 과실로 사고가 발생했음을 의미합니다. 내 차 피해가 0원인 이유는 두 가지입니다. 첫째는 실제로 상대방 차량만 살짝 긁히고 내 차는 튼튼한 범퍼 가드 덕에 파손이 전혀 없었거나, 둘째는 본인 과실이 커서 자차 보험 처리를 할 경우 보험료 할증이 두려워 본인 차량은 사설 공업사에서 자비로 현금 수리했을 가능성입니다. 따라서 프레임 부위의 도색 두께와 볼트 체결부를 반드시 실물 점검해야 합니다.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">2. 자동차 사고 후 보험 처리를 취소하고 환불(환입)하면 이력에서 삭제되나요?</summary>
+                    <div class="faq-answer">
+                        그렇습니다. 보험사고 처리 후 지급된 보험금 전액을 보험사에 다시 돌려주는 '보험금 환입 제도'를 이용하면, 해당 사고 건은 공식적으로 보험 처리 실적에서 소멸 처리됩니다. 이에 따라 차량보험 이력 조회 보고서 상에서도 사고 기록이 삭제되어 무사고 상태로 원복되며, 차후 자동차보험 갱신 시 사고 건수 할증 요율도 적용되지 않습니다. 통상 30만 원에서 50만 원 미만의 경미한 접촉사고는 환입하는 것이 장기적으로 보험료 절약에 유리합니다.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">3. 카히스토리 알뜰 조회와 일반 조회의 차이점 및 비용 차이는 무엇인가요?</summary>
+                    <div class="faq-answer">
+                        정보의 세부 내용은 동일합니다. 다만 본인 확인 인증(휴대폰 본인인증 등)을 거치는 알뜰 조회는 연간 5회에 한해 건당 770원(부가세 포함)의 할인된 요금으로 조회가 가능하며, 비회원 상태로 간편 인증 없이 진행하는 일반 조회는 건당 2,200원이 부과됩니다. 중고차를 집중 탐색하는 기간에는 본인 인증을 통한 알뜰 조회를 이용하는 것이 비용을 절약하는 최적의 방법입니다.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">4. 2026년 이후 전기차 배터리 사고 이력은 어떻게 구분하여 확인하나요?</summary>
+                    <div class="faq-answer">
+                        2026년부터 개정된 자동차관리법 및 보험개발원 표준 공시 기준에 따라, 전기차의 경우 하부 배터리 케이스 손상으로 인한 모듈 교체, 팩 전체 어셈블리 교체 내역이 '고전압 전동화 구동계 부품 수리' 항목으로 별도 분리 기재됩니다. 수리비 내역 중 부품 가격이 1,000만 원에서 2,000만 원 이상 찍혀 있다면 배터리 팩이 통째로 교환된 이력이므로 배터리 제조일자와 보증 승계 여부를 확인해야 합니다.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">5. 중고차 매매상사 딜러가 보여주는 성능점검표와 카히스토리 중 무엇을 우선해야 하나요?</summary>
+                    <div class="faq-answer">
+                        두 문서는 상호 보완적인 관계입니다. 성능점검기록부는 전문 평가사가 실차를 육안 점검하여 휀더, 도어, 쿼터패널 등 외판과 골격의 '물리적 교환 및 판금 흔적'을 기재한 물리적 상태 보고서입니다. 반면 카히스토리는 '금전적 보험금 지급 흐름'을 기록한 금융 데이터 보고서입니다. 따라서 두 문서를 책상 위에 나란히 펼쳐놓고, 카히스토리에 300만 원의 내 차 피해가 있는데 성능점검표에 완전 무사고로 기재되어 있다면 성능점검 오류나 축소 은폐를 강하게 의심해야 합니다.
+                    </div>
+                </details>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+  
+</div>
+
+<script>
+function runInsuranceCalculation() {
+    var ageVal = parseInt(document.getElementById("calcAge").value, 10);
+    var carType = document.getElementById("calcCarType").value;
+    var accidentCount = parseInt(document.getElementById("calcAccidentCount").value, 10);
+    var basePremium = parseFloat(document.getElementById("calcBasePremium").value);
+
+    if (isNaN(basePremium) || basePremium <= 0) {
+        alert("현재 기준 유효한 보험료 금액을 입력해 주십시오.");
+        return;
+    }
+
+    var ageFactor = 1.0;
+    if (ageVal === 20) ageFactor = 1.45;
+    else if (ageVal === 26) ageFactor = 1.20;
+    else if (ageVal === 30) ageFactor = 1.00;
+    else if (ageVal === 40) ageFactor = 0.90;
+    else if (ageVal === 50) ageFactor = 0.88;
+
+    var carFactor = 1.0;
+    if (carType === "light") carFactor = 0.85;
+    else if (carType === "compact") carFactor = 1.00;
+    else if (carType === "mid") carFactor = 1.08;
+    else if (carType === "suv") carFactor = 1.12;
+    else if (carType === "import") carFactor = 1.40;
+
+    var accidentRate = 0.0;
+    var statusText = "우수 무사고 등급 (할인 대상)";
+
+    if (accidentCount === 0) {
+        accidentRate = -0.07;
+        statusText = "3년 무사고 할인 등급 유지";
+    } else if (accidentCount === 1) {
+        accidentRate = 0.18;
+        statusText = "사고 1건 할증 (기본 1그룹 상승)";
+    } else if (accidentCount === 2) {
+        accidentRate = 0.42;
+        statusText = "사고 2건 누적 집중 할증 요율";
+    } else if (accidentCount >= 3) {
+        accidentRate = 0.85;
+        statusText = "공동인수(인수거절) 심사 위험 구간";
+    }
+
+    var calculated = basePremium * (1 + accidentRate) * (ageFactor / 1.0) * (carFactor / 1.0);
+    var delta = calculated - basePremium;
+
+    document.getElementById("resRenewPremium").innerText = Math.round(calculated).toLocaleString() + " 원";
+    
+    var deltaSign = delta >= 0 ? "+" : "";
+    document.getElementById("resDeltaPremium").innerText = deltaSign + Math.round(delta).toLocaleString() + " 원";
+    document.getElementById("resRateStatus").innerText = statusText;
+
+    var resultBox = document.getElementById("calcResultBox");
+    resultBox.classList.add("active");
+}
+</script>
+
+  
